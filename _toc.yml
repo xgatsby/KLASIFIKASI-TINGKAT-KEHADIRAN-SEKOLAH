@@ -1,0 +1,14 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Konten Utama
+    chapters:
+      - file: 01_data-loading
+      - file: 02_preprocessing
+      - file: 03_modeling
+      - file: 04_cross-validation
+      - file: 05_conclusion
+  - caption: Lampiran
+    chapters:
+      - file: appendix/data_dictionary
+      - file: appendix/source_code

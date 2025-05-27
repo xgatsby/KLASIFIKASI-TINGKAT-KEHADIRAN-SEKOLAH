@@ -1,0 +1,5 @@
+# Pengaturan Judul & Author
+title: "Proyek Klasifikasi Tingkat Kehadiran Sekolah"
+author: "Faisal Graha Twofaz, Wiwin Pasaribu, Rizki Ramadhan Lubis"
+launch_buttons:
+  notebook_interface: jupyterlab  # Tombol open di JupyterLab

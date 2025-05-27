@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\jupyter_core\utils\__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\nbclient\client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\jupyter_core\utils\__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\MRH\AppData\Roaming\Python\Python312\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+fold = 1
+for train_index, test_index in skf.split(X, y):
+    # Split data
+    X_train_fold, X_test_fold = X.iloc[train_index], X.iloc[test_index]
+    y_train_fold, y_test_fold = y.iloc[train_index], y.iloc[test_index]
+    
+    # Standarisasi
+    scaler = StandardScaler()
+    X_train_fold_scaled = scaler.fit_transform(X_train_fold)
+    X_test_fold_scaled = scaler.transform(X_test_fold)
+    
+    # Training
+    model = GaussianNB()
+    model.fit(X_train_fold_scaled, y_train_fold)
+    
+    # Prediksi
+    y_pred_fold = model.predict(X_test_fold_scaled)
+    
+    # Evaluasi
+    acc = accuracy_score(y_test_fold, y_pred_fold)
+    prec = precision_score(y_test_fold, y_pred_fold)
+    rec = recall_score(y_test_fold, y_pred_fold)
+    f1 = f1_score(y_test_fold, y_pred_fold)
+    
+    # Simpan
+    cv_accuracy.append(acc)
+    cv_precision.append(prec)
+    cv_recall.append(rec)
+    cv_f1.append(f1)
+    
+    print(f"Fold {fold}:")
+    print(f"  Accuracy : {acc:.4f}")
+    print(f"  Precision: {prec:.4f}")
+    print(f"  Recall   : {rec:.4f}")
+    print(f"  F1-Score : {f1:.4f}\\n")
+    
+    fold += 1
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[6][39m[32m, line 8[39m
+[32m      5[39m y_train_fold, y_test_fold = y.iloc[train_index], y.iloc[test_index]
+[32m      7[39m [38;5;66;03m# Standarisasi[39;00m
+[32m----> [39m[32m8[39m scaler = [43mStandardScaler[49m()
+[32m      9[39m X_train_fold_scaled = scaler.fit_transform(X_train_fold)
+[32m     10[39m X_test_fold_scaled = scaler.transform(X_test_fold)
+
+[31mNameError[39m: name 'StandardScaler' is not defined
+

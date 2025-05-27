@@ -1,0 +1,11 @@
+School_ID,Date,School_Name,School_Level,Enrolled,Present,Absent,Released_Early
+8270,2018-09-01,School 1,Middle,576,501,21,54
+1860,2018-09-02,School 2,Elementary,460,359,36,65
+6390,2018-09-03,School 3,Middle,759,628,120,11
+6191,2018-09-04,School 4,K-8,613,463,66,84
+6734,2018-09-05,School 5,K-8,321,277,6,38
+7265,2018-09-06,School 6,Middle,552,480,23,49
+1466,2018-09-07,School 7,Middle,1047,751,199,97
+5426,2018-09-08,School 8,Middle,1156,1121,35,0
+6578,2018-09-09,School 9,K-8,860,675,24,161
+9322,2018-09-10,School 10,K-8,774,690,72,12
