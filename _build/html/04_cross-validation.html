@@ -441,16 +441,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">y_train_fold</span><span class="p">,</span> <span class="n">y_test_fold</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Standarisasi</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">X_train_fold_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train_fold</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">X_test_fold_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test_fold</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;StandardScaler&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fold 1:
+  Accuracy : 0.9500
+  Precision: 0.8333
+  Recall   : 1.0000
+  F1-Score : 0.9091\n
+Fold 2:
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1-Score : 1.0000\n
+Fold 3:
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1-Score : 1.0000\n
+Fold 4:
+  Accuracy : 0.9000
+  Precision: 0.8333
+  Recall   : 0.8333
+  F1-Score : 0.8333\n
+Fold 5:
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1-Score : 1.0000\n
 </pre></div>
 </div>
 </div>
@@ -545,7 +560,7 @@ Ini memberikan keyakinan bahwa model tidak overfit terhadap subset tertentu.</p>
   <div class="footer-item">
     
 <p class="component-author">
-By Faisal Graha Twofaz, Wiwin Pasaribu, Rizki Ramadhan Lubis, Fajar Aditya Pratama
+By Kelompok 01 - Faisal, Wiwin, Rizki
 </p>
 
   </div>
