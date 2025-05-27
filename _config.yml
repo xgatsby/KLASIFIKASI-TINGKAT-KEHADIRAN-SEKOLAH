@@ -1,5 +1,11 @@
-# Pengaturan Judul & Author
+# Metadata
 title: "Proyek Klasifikasi Tingkat Kehadiran Sekolah"
-author: "Faisal Graha Twofaz, Wiwin Pasaribu, Rizki Ramadhan Lubis, Fajar Aditya Pratama"
+author: "Kelompok 01 - Faisal, Wiwin, Rizki"
+
+# Konfigurasi GitHub Pages
+html_baseurl: "/kelompok-01/"
+use_directory_urls: false
+
+# Tombol Peluncuran
 launch_buttons:
-  notebook_interface: jupyterlab  # Tombol open di JupyterLab
+  notebook_interface: jupyterlab

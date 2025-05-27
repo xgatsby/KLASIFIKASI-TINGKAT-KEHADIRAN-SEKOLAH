@@ -31,10 +31,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-from sklearn.model_selection import StratifiedKFold
-# ... dll
-
-X = df[['Attendance_Rate', 'Absence_Rate', 'Early_Release_Rate']]
-y = df['Attendance_Label'].map({'High':1,'Low':0})
+['from sklearn.model_selection import train_test_split', 'from sklearn.preprocessing import StandardScaler', 'from sklearn.naive_bayes import GaussianNB', 'from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix', '']
+...
+["    if data['Present'][i] + data['Absent'][i] > data['Enrolled'][i]:", "        data['Absent'][i] = data['Enrolled'][i] - data['Present'][i]", "data['Released_Early'] = [data['Enrolled'][i] - data['Present'][i] - data['Absent'][i] for i in range(n)]", '', 'df = pd.DataFrame(data)']
 -------------------
 
